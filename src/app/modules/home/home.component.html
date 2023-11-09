@@ -1,0 +1,240 @@
+<app-header></app-header>
+<div
+  class="px-4 h-[550px] flex flex-col justify-end overflow-y-clip overflow-x-hidden items-center relative py-10 bg-center bg-no-repeat bg-cover"
+  style="background-image: url('assets/harmony_moca.png')"
+>
+  <div class="flex flex-col h-full w-full justify-end gap-y-10 z-10">
+    <div class="max-sm:pt-32">
+      <h1 class="text-3xl font-test text-primary-light font-normal">
+        O Transplante Capilar para um novo você
+      </h1>
+
+      <p class="text-primary-normal text-xs">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+
+    <app-button text="Agende Sua Avaliação" />
+  </div>
+
+  <div
+    style="
+      background: linear-gradient(
+        90deg,
+        rgba(3, 7, 18, 1) 0%,
+        rgba(3, 7, 18, 0.8085609243697479) 51%,
+        rgba(3, 7, 18, 0) 100%
+      );
+      background: rgb(3, 7, 18);
+    "
+    class="h-[400px] rotate-[20deg] w-[600px] absolute rounded-[200px] inset-x-0 -bottom-[220px] -left-40 filter blur-2xl"
+  ></div>
+</div>
+
+<div class="py-10 px-4 text-center flex flex-col items-center gap-y-2">
+  <h1 class="text-2xl max-sm:px-2 font-test">
+    Problemas Capilares? Nós Podemos Ajudar!
+  </h1>
+
+  <p class="text-xs font-extralight text-primary-opaco">
+    Cada um dos nossos serviços é projetado para atender a diferentes
+    necessidades e preferências dos pacientes, sempre com foco em proporcionar
+    resultados naturais, restaurar a autoestima e oferecer uma experiência
+    confiável e profissional em transplante capilar.
+  </p>
+
+  <img
+    src="assets/harmony_cirurgia.png"
+    alt="Harmony Cirurgia Imagem"
+    class="w-full h-full max-h-60 object-fill mt-12"
+  />
+</div>
+
+<div class="py-8 px-4 flex flex-col bg-[#131313]">
+  <h1 class="text-2xl font-test">Nossos Serviços</h1>
+
+  <section class="w-full flex flex-col gap-y-4 mt-10">
+    <div *ngFor="let service of services">
+      <div class="w-full flex items-center font-test text-base gap-x-4">
+        <div
+          class="flex h-1 w-1 rounded-full bg-primary-light shadow-custom"
+        ></div>
+
+        <h2 class="flex-1">{{ service.title }}</h2>
+      </div>
+
+      <ul
+        class="flex flex-col justify-items-end w-full list-disc pl-8 text-graytext mt-4"
+      >
+        <li *ngFor="let about of service.aboutPoints" class="text-xs items-end">
+          {{ about }}
+        </li>
+      </ul>
+    </div>
+
+    <img
+      src="assets/image_1.png"
+      alt="Harmony Demonstraçāo 1"
+      class="w-full h-full max-h-60 object-fill mt-8"
+    />
+  </section>
+</div>
+
+<div class="py-8 px-4 flex flex-col">
+  <h1 class="text-2xl font-test">Clinica de Qualidade e Inovação</h1>
+
+  <section
+    class="w-full flex flex-col gap-y-4 mt-10 text-xs text-justify font-extralight text-primary-opaco"
+  >
+    <p>
+      Com uma equipe altamente qualificada e instalações modernas, oferecemos
+      uma abordagem personalizada para restaurar sua autoestima e beleza
+      natural. Priorizamos a sua tranquilidade e confiança em cada etapa do
+      processo, garantindo resultados naturais e duradouros.
+    </p>
+
+    <p>
+      Na Clínica Harmony de Transplante Capilar, nossa paixão é ajudar você a se
+      sentir melhor consigo mesmo.
+    </p>
+
+    <app-button text="Agende Sua Avaliação" class="mt-12" />
+
+    <img
+      src="assets/harmony_loja.png"
+      alt="Harmony Loja"
+      class="w-full h-full max-h-100 object-fill my-14"
+    />
+  </section>
+</div>
+
+<div
+  class="py-18 text-center flex flex-col items-center px-4"
+  style="
+    background: linear-gradient(
+      101.43deg,
+      #ecb848 36.37%,
+      #edc97c 71.11%,
+      #ecb849 96.99%
+    );
+  "
+>
+  <div class="text-gray-950 flex flex-col items-center font-test py-8">
+    <p class="text-2xl">+1500</p>
+    <p>Clientes Satisfeito</p>
+  </div>
+  <div class="w-20 bg-gray-950 h-[1px]"></div>
+  <div class="text-gray-950 flex flex-col items-center font-test py-8">
+    <p class="text-2xl">+1500</p>
+    <p>Clientes Satisfeito</p>
+  </div>
+  <div class="w-20 bg-gray-950 h-[1px]"></div>
+  <div class="text-gray-950 flex flex-col items-center font-test py-8">
+    <p class="text-2xl">+1500</p>
+    <p>Clientes Satisfeito</p>
+  </div>
+</div>
+
+<div
+  class="py-10 px-4 flex flex-col text-center items-center overflow-y-hidden overflow-x-clip"
+>
+  <h1 class="text-3xl font-test mt-4">Dra. Lorem Impsum</h1>
+  <p class="text-sm mt-2 font-light">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+
+  <div class="relative h-100 mt-10">
+    <div
+      style="
+        background: rgb(236, 184, 72);
+        background: radial-gradient(
+          circle,
+          rgba(236, 184, 72, 1) 0%,
+          rgba(236, 184, 72, 0.08867296918767509) 100%
+        );
+      "
+      class="h-80 w-80 -right-20 top-10 filter blur-3xl rounded-full opacity-30 absolute -z-10"
+    ></div>
+    <img
+      src="assets/medica_1.png"
+      alt="Harmony Loja"
+      class="w-full h-100 object-fill my-14"
+    />
+    <div
+      style="
+        background: linear-gradient(
+          90deg,
+          rgba(3, 7, 18, 1) 0%,
+          rgba(3, 7, 18, 0.8085609243697479) 51%,
+          rgba(3, 7, 18, 0) 100%
+        );
+        background: rgb(3, 7, 18);
+      "
+      class="h-[400px] rotate-[20deg] w-[600px] absolute rounded-[200px] inset-x-0 -bottom-[220px] -left-40 filter blur-2xl"
+    ></div>
+  </div>
+</div>
+
+<div
+  class="p-4 pb-24 flex flex-col text-center items-center overflow-y-hidden overflow-x-clip"
+>
+  <h1 class="text-3xl font-test mt-4">Nossos Resultados</h1>
+  <p class="text-sm mt-2 font-light">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+
+  <section class="flex flex-col items-center gap-y-4 mt-24">
+    <img
+      src="assets/tratamento_cabelo_1.png"
+      alt="Tratamento Cabelo"
+      class="w-full h-full max-h-60 object-fill"
+    />
+    <img
+      src="assets/tratamento_cabelo_2.png"
+      alt="Tratamento Cabelo"
+      class="w-full h-full max-h-60 object-fill"
+    />
+    <img
+      src="assets/tratamento_cabelo_3.png"
+      alt="Tratamento Cabelo"
+      class="w-full h-full max-h-60 object-fill"
+    />
+  </section>
+</div>
+
+<div
+  style="
+    background: linear-gradient(
+      101.43deg,
+      #ecb848 36.37%,
+      #edc97c 71.11%,
+      #ecb849 96.99%
+    );
+  "
+  class="py-16 text-center flex flex-col px-4 items-center gap-y-10"
+>
+  <h1 class="text-3xl font-test text-center text-gray-950">
+    Seus sonhos não podem ficar para depois.
+  </h1>
+
+  <app-button text="Agende Sua Avaliação" [dark]="true" class="flex-1 w-full" />
+</div>
+
+<div
+  class="py-10 pb-24 flex flex-col text-center items-center overflow-y-hidden overflow-x-clip px-4"
+>
+  <h1 class="text-3xl font-test mt-4">O que nossos pacientes dizem</h1>
+  <p class="text-sm mt-2 font-light">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+
+  <section class="flex flex-col items-center w-full gap-y-4 mt-24">
+    <div *ngFor="let comment of comments" class="w-full flex-1">
+      <app-comment [data]="comment" class="w-full" />
+    </div>
+  </section>
+</div>

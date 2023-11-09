@@ -1,10 +1,32 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ButtonComponent } from './components/button/button.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { HeaderComponent } from './components/header/header.component';
+import { StarComponent } from './icons/star/star.component';
+import { HomeComponent } from './modules/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [
+    HeaderComponent,
+    HomeComponent,
+    ButtonComponent,
+    StarComponent,
+    CommentComponent,
+  ],
+  imports: [RouterModule.forRoot(routes), CommonModule],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
