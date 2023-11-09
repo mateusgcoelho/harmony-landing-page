@@ -1,0 +1,17 @@
+<section class="w-full flex flex-col">
+  <button
+    (click)="toggleExpanded()"
+    [ngClass]="!expanded ? 'border-b-primary-lighter border-b-[1px]' : ''"
+    class="w-full flex justify-between items-center py-2 hover:bg-gray-800 transition-all px-4"
+  >
+    <p class="font-test flex-1 text-left">{{ data.title }}</p>
+
+    <app-chevron-down [ngClass]="expanded ? '' : 'rotate-180'" />
+  </button>
+  <div
+    *ngIf="expanded"
+    class="w-full flex flex-col text-xs py-6 text-justify px-5"
+  >
+    <p>{{ data.content }}</p>
+  </div>
+</section>

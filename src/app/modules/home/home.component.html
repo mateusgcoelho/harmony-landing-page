@@ -232,9 +232,25 @@
     tempor incididunt ut labore et dolore magna aliqua.
   </p>
 
-  <section class="flex flex-col items-center w-full gap-y-4 mt-24">
+  <section class="flex flex-col items-center w-full gap-y-6 mt-20">
     <div *ngFor="let comment of comments" class="w-full flex-1">
       <app-comment [data]="comment" class="w-full" />
     </div>
+  </section>
+</div>
+
+<div
+  class="py-8 pb-40 flex flex-col text-center items-center overflow-y-hidden overflow-x-clip px-4"
+>
+  <h1 class="text-3xl font-test">Dúvidas Frequentes</h1>
+
+  <section class="flex flex-col items-center w-full gap-y-6 mt-20">
+    <app-faq-item
+      *ngFor="let faqItem of faqItens"
+      [data]="faqItem"
+      class="w-full flex-1"
+    />
+
+    <app-button text="Agende Sua Avaliação" class="flex-1 w-full mt-16" />
   </section>
 </div>
